@@ -33,6 +33,9 @@ public class OreDictator {
     public void postInit(FMLPostInitializationEvent event) {
         ConfigManager.init(configFolder);
         RecipeUnifier.unifyRecipes();
+		TradeUnifier.unifyTrades();
+		ItemHider.hideUnselectedItems();
+        
         System.out.println("Ore Choice & Unification applied successfully!");
     }
 }
